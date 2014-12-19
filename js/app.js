@@ -23,14 +23,10 @@ var server = http.createServer(function(req, res) {
       return true;
     };
 
-    // record the visit
-    client.query('INSERT INTO visit (date) VALUES ($1)', [new Date()], function(err, result) {
+  
 
-      // handle an error from the query
-      if(handleError(err)) return;
-
-      // get the total number of visits today (including the current visit)
-      client.query('SELECT COUNT(date) AS count FROM visit', function(err, result) {
+      // get the race results for user
+      client.query('SELECT (raceID) AS FROM results', function(err, result) {
 
         // handle an error from the query
         if(handleError(err)) return;
