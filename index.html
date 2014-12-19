@@ -94,10 +94,10 @@
     <script src="js/app.js"></script>
     
     <!-- Insert of Client Side Script for Server -->
-    <script type="text/javascript">
+    <script>
       var pg = require('pg');
 
-      var conString = "postgres://username:password@localhost/database";
+      var conString = "postgres://dmac@127.0.0.1";
 
       var client = new pg.Client(conString);
         client.connect(function(err) {

@@ -1,7 +1,7 @@
 var http = require('http');
 var pg = require('pg');
 
-var conString = "postgres://postgres:1234@localhost/postgres";
+var conString = "postgres://dmac@127.0.0.1";
 
 var server = http.createServer(function(req, res) {
 
