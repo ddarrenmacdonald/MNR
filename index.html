@@ -9,6 +9,13 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom stylesheet by Darren -->
+     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom fonts from Google -->
+    <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,7 +31,7 @@
     <!-- Header Area -->
     <div class="row">
       <div class="col-md-6">
-      <img src="http://placehold.it/200x200">
+      <img src="images/SBElogo.png" width="150">
       </div>
       <div class="col-md-6 title-area text-right">
       <h1 class="title-MNR">Monday Night Racing</h1>
@@ -37,8 +44,10 @@
 
     <!-- Profile Area -->
     <div class="profile-area row">
+      <div class="picture-area">
         <div class="profile-pic col-md-4"><img src="http://placehold.it/150x150"></div>
-        <div class="last-name">Last Name</div>, <div class="first-name">First Name</div>
+        <div class="last-name">Last Name</div>, <div class="first-name"> First Name</div>
+      </div>
       <div class="profile-bio col-md-8 " align="right"><img src="http://placehold.it/600x400"></div>  
     </div>
 
@@ -100,11 +109,11 @@
           if(err) {
             return console.error('could not connect to postgres', err);
               }
-        client.query('SELECT NOW() AS "theTime"', function(err, result) {
+        client.query('SELECT date FROM results', function(err, result) {
           if(err) {
             return console.error('error running query', err);
               }
-        console.log(result.rows[0].theTime);
+        console.log(result.rows[0].date);
     
     //output: Tue Jan 15 2013 19:12:47 GMT-600 (CST)
     client.end();

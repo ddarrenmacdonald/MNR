@@ -1,0 +1,19 @@
+.title-MNR {
+	font-family: 'Righteous', cursive;
+	color: #000059;
+}
+
+.title-leaderboard {
+	font-family: 'Montserrat', sans-serif;
+	color: #1F9ED1;
+	font-size: 24px;
+	margin-top: 5px;
+}
+
+.picture-area {
+	float: left;
+}
+
+.profile-bio {
+	float: right;
+}
